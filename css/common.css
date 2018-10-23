@@ -1,0 +1,465 @@
+/* 
+	SET CHARTSET
+*/
+
+	@charset "utf-8";
+
+/* 
+	IMPORT FONT FILES
+*/
+
+	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700');
+
+/*
+	COMMON
+*/
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html, body {
+		width: 100%;
+		min-height: 100%;
+	}
+
+	body {
+		font-family: "Source Sans Pro", "Arial";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.8;
+		letter-spacing: -.05px;
+		color: #34495e;
+		background-color: #fff;
+	}
+
+	div, form {
+		position: relative;
+		display: block;
+	}
+
+	article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	    display: block;
+	}
+
+	a {
+		color: inherit;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		text-decoration: none;
+	}
+
+	a:hover, a:active, a:focus, button:focus {
+		outline: 0;
+		border: 0;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	ol, ul, li {
+		list-style: none;
+	}
+
+	input, textarea {
+		outline: none;
+	}
+
+	select {
+		-moz-appearance: none; /* Firefox */
+		-webkit-appearance: none; /* Safari and Chrome */
+		background-image: url('//www.ablestor.com/public/image/icon/select_arrow.png');
+		background-repeat: no-repeat;
+		background-position: right 9px center;
+	}
+
+	input[type=text].req,
+	input[type=password].req,
+	select.req {
+		background-image: url('//www.ablestor.com/public/image/icon/check.png');
+		background-size: 18px;
+		background-repeat: no-repeat;
+		background-position: right 10px center;
+		padding-right: 34px !important;
+	}
+
+/*
+	Layout
+*/
+
+	.layout {
+		position: relative;
+		width: 1024px;
+		height: auto;
+		margin: 0 auto;
+	}
+
+/*
+    ABLESTOR Icon Libaray
+*/
+
+.Acon {
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	padding: 0;
+	vertical-align: middle;
+	display: inline-block;
+	background-size: 100% 100%;
+}
+
+/*
+	Acon Social Icons
+*/
+
+	.Acon.ablestor {
+		background-image: url('/public/image/icon/ablestor_icon.png');
+	}
+
+	.Acon.facebook {
+		background-image: url('/public/image/icon/facebook_icon.png');
+	}
+
+	.Acon.google {
+		background-image: url('/public/image/icon/google_icon.png');
+	}
+
+	.Acon.naver {
+		background-image: url('/public/image/icon/naver_icon.png');
+	}
+
+	.Acon.kakao {
+		background-image: url('/public/image/icon/kakao_icon.png');
+	}
+
+	.Acon.kakao-plus {
+		background-image: url('/public/image/icon/kakao_plus_icon.png');
+	}
+
+/*
+	Acon Useful Icons
+*/
+
+	.Acon.alert {
+		background-image: url('/public/image/icon/important.png');
+	}
+
+	.Acon.checkbox {
+		background-image: url('/public/image/icon/check_box.png');
+	}
+
+	.Acon.check {
+		background-image: url('/public/image/icon/check.png');
+	}
+
+	.Acon.folder {
+		background-image: url('/public/image/icon/folder_small.png');
+	}
+
+	.Acon.file {
+		background-image: url('/public/image/icon/file_small.png');
+	}
+
+/* DEFAULT TABLE */
+
+	table.template {
+		width: 100%;
+		margin-bottom: 14px;
+	}
+
+	table.template th {
+		padding: 12px 7px;
+		color: #c9c7c7;
+		font-weight: normal;
+		border-bottom: 1px solid #ddd;
+	}
+
+	table.template td {
+		padding: 12px 7px;
+		font-size: 13px;
+		transition: all .1s;
+	}
+
+	table.template tr:hover td {
+		background-color: #eee !important;
+	}
+
+	table.template tr:nth-child(2n) td {
+		background-color: #f9fbfb;
+	}
+
+	table.template tr.state-red td {
+		background-color: #f2dede !important;
+	}
+
+	table.template tr.state-red:hover td {
+		background-color: #ebcccc !important;
+	}
+
+	table.template tr.state-green td {
+		background-color: #dff0d8 !important;
+	}
+
+	table.template tr.state-green:hover td {
+		background-color: #d0e9c6 !important;
+	}
+
+	table.template tr.state-blue td {
+		background-color: #d9edf7 !important;
+	}
+
+	table.template tr.state-blue:hover td {
+		background-color: #c4e3f3 !important;
+	}
+
+	table.template tr.state-yellow td {
+		background-color: #ffeaa7 !important;
+	}
+	
+	table.template tr.state-yellow:hover td {
+		background-color: #ffecaf !important;
+	}
+
+	table.template .status {
+		width: 70px;
+		padding: 3px 0;
+		display: inline-block;
+	}
+
+	table.template .status.wait {
+		color: #fff !important;
+		text-align: center;
+		border-radius: 35px;
+		background-color: #DADFE1;
+	}
+
+	table.template .status.ok {
+		color: #fff !important;
+		text-align: center;
+		border-radius: 35px;
+		background-color: #4183D7;
+	}
+
+	table.template .status.more {
+		color: #fff !important;
+		text-align: center;
+		border-radius: 35px;
+		background-color: #EC644B;
+	}
+
+	/* table.template .status.wait::before {
+		content: "";
+		display: inline-block;
+		width: 11px;
+		height: 11px;
+		margin-top: -2px;
+		margin-right: 6px;
+		line-height: normal;
+		vertical-align: middle;
+		border-radius: 50%;
+		background-color: lightgray;
+	}
+
+	table.template .status.ok::before {
+		content: "";
+		display: inline-block;
+		width: 11px;
+		height: 11px;
+		margin-top: -2px;
+		margin-right: 6px;
+		line-height: normal;
+		vertical-align: middle;
+		border-radius: 50%;
+		background-color: skyblue;
+	}
+
+	table.template .status.more::before {
+		content: "";
+		display: inline-block;
+		width: 11px;
+		height: 11px;
+		margin-top: -2px;
+		margin-right: 6px;
+		line-height: normal;
+		vertical-align: middle;
+		border-radius: 50%;
+		background-color: tomato;
+	} */
+
+	table.template select {
+		width: 80px;
+		padding: 7px 4px;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+	}
+
+/*
+	CALENDAR
+*/
+
+	#calendar {
+		width: 100%;
+		display: table;
+		table-layout: fixed;
+	}
+
+	#calendar .tooltip,
+	#calendar-sample .tooltip {
+		font-size: 11px;
+	}
+
+	#calendar td {
+		position: relative;
+		padding: 14px 7px;
+		min-height: 100px;
+		vertical-align: top;
+		background-color: #fff;
+		border: 1px solid #f1f1f1;
+		transition: all .3s;
+	}
+
+	#calendar td .date {
+		position: absolute;
+		width: 22px;
+		height: 22px;
+		top: 0;
+		left: 4px;
+		text-align: center;
+		display: inline-block;
+		line-height: 22px;
+		vertical-align: middle;
+		background-color: #eee;
+		border-radius: 50%;
+	}
+
+	#calendar td.today {
+		background-color: #f9f9f9;
+	}
+
+	#calendar td .date::after {
+		opacity: 0;
+		transition: all .3s;
+	}
+
+	#calendar td .date:hover::after {
+		content: "+";
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: 0px;
+		left: 0px;
+		text-align: center;
+		display: inline-block;
+		line-height: 24px;
+		vertical-align: middle;
+		background-color: #eee;
+		border-radius: 50%;
+		opacity: 1;
+	}
+
+	#calendar .calendar_content {
+		min-height: 120px;
+	}
+
+	#calendar .saturday {
+		color: #25b3c1;
+	}
+
+	#calendar .sunday {
+		color: #ff444f;
+	}
+
+	#calendar .todo-list {
+		position: absolute;
+		top: 2px;
+		left: 32px;
+		margin-bottom: 0;
+	}
+
+	#calendar .todo-list.pointing {
+		min-width: 140px;
+		min-height: 21px;
+		border: 1px dashed #eee;
+	}
+
+	#calendar .todo-list li,
+	#calendar-sample li {
+		margin-bottom: 4px;
+		padding: 0 7px;
+		color: #fff;
+		background-color: #6EB590;
+		border-radius: 24px;
+	}
+
+	#calendar .todo-list li > span,
+	#calendar-sample li > span {
+		word-break: keep-all;
+	}
+
+	#calendar-sample li.hint {
+		color: #fff;
+		background-color: #333;
+	}
+
+	#calendar .todo-list li.education,
+	#calendar-sample li.education {
+		background-color: #115b84 !important;
+	}
+
+	#calendar .todo-list li.support,
+	#calendar-sample li.support {
+		background-color: #fabe58 !important;
+	}
+
+	#calendar .replacement,
+	#calendar .newTodoItem {
+		border: none;
+		background-color: transparent;
+	}
+
+	#calendar-sample {
+		margin: 14px 0;
+		padding: 4px 0;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+		display: block;
+	}
+
+	#calendar-sample ul {
+		margin-bottom: 0;
+		padding: 0 4px;
+	}
+
+	#calendar-sample li {
+		margin-bottom: 0;
+		margin: 0 1px;
+		display: inline-block;
+	}
+
+/* SWAL */
+
+.swal-title {
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.swal-text {
+	font-size: 14px;
+}
+
+.swal-button {
+	padding: 8px 26px !important;
+	font-weight: normal;
+}
+
+.swal-button--confirm {
+	background-color: #ff444f !important;
+}
+
+.swal-button--confirm:focus {
+	color: #fff;
+}
